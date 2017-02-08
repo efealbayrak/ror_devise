@@ -1,0 +1,24 @@
+<header>
+	<nav id="header_menu">
+		<ul id="main_menu">
+			<li class="menu_items"><%= link_to "Home", root_path %></li>
+			<li class="menu_items"><%= link_to "Buy", "#" %></li>
+			<li class="menu_items"><%= link_to "Sell", "#" %></li>
+			<li class="menu_items"><%= link_to "Sold", "#" %></li>
+		</ul>
+		<ul id="user_menu">
+			<% if user_signed_in? %>
+			<li class="menu_items" id="draggable"><%= link_to current_user.email, edit_user_registration_path %>
+				<ul class="sub_user_menu">
+					<li class="sub_menu_items"><%= link_to "Messages", "#" %></li>
+					<li class="sub_menu_items"><%= link_to "Watchlist", "#" %></li>
+					<li class="sub_menu_items"><%= link_to "My Listings", "#" %></li>
+					<li class="sub_menu_items"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+				</ul>
+			</li>
+			<% else %>
+			<li class="menu_items" id="login"><%= link_to "Login", new_user_session_path %>
+			<% end %>
+		</ul>
+	</nav>
+</header>

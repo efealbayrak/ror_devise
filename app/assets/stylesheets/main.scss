@@ -1,0 +1,96 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body, html{
+	padding: 0;
+	margin: 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	font-family: 'Roboto', sans-serif;
+}
+header{
+	height: 100px;
+	background: #000;
+
+	nav{
+		width: 100%;
+		display: inline-block;
+
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			.menu_items{
+				float: left;
+
+				a{
+					display: block;
+					text-decoration: none;
+					color: #22759D;
+					font-size: 30px;
+					font-family: 'Roboto', sans-serif;
+					box-sizing: border-box;
+					line-height: 100px;
+					padding: 0 50px;
+					background: #000;
+					-webkit-transition: all 0.5s;
+					-moz-transition: all 0.5s;
+					transition: all 0.5s;
+				}
+				a:hover{
+					background: #22759D;
+					color: #E2EBEA;
+					text-shadow: inset 0px 3px 5px 3px #000;
+				}
+			}
+		}
+		#user_menu{
+			float: right;
+
+			#draggable{
+
+				.sub_user_menu{
+				display: none;
+
+					.sub_menu_items{
+
+						a{
+						display: block;
+						text-decoration: none;
+						color: #22759D;
+						font-size: 20px;
+						font-family: 'Roboto', sans-serif;
+						box-sizing: border-box;
+						line-height: 30px;
+						padding: 10px;
+						background: #323232;
+						-webkit-transition: all 0.5s;
+						-moz-transition: all 0.5s;
+						transition: all 0.5s;
+						text-align: center;
+						border-bottom: 1px dotted #646464;
+						}
+						a:hover{
+							background: #22759D;
+							color: #E2EBEA;
+							text-shadow: inset 0px 3px 5px 3px #000;
+						}
+						a:hover ~ #draggable{
+							background: #22759D;
+						}
+					}
+				}
+			}
+			#draggable:hover .sub_user_menu{
+				display: block;
+			}
+		}
+	}
+}
+footer{
+	height: 200px;
+	background: #000;
+	color: #22759D;
+}

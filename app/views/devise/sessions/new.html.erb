@@ -1,0 +1,12 @@
+<fieldset class="devise_form">
+  <legend>Login</legend>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <label class="fa fa-user devise_input_label" aria-hidden="true"><%= f.email_field :email, autofocus: true, :placeholder => "E-mail" %></label>
+    <label class="fa fa-lock devise_input_label" aria-hidden="true"><%= f.password_field :password, autocomplete: "off", :placeholder => "Password" %></label>
+    <%= f.submit "Log in", :class => "submit_button login_button" %>
+    <% if devise_mapping.rememberable? -%>
+    <label class="remember_me_label"><%= f.check_box :remember_me %>Remember me</label>
+    <% end -%>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</fieldset>

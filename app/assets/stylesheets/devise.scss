@@ -1,0 +1,139 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.devise_form{
+	width: 302px;
+	margin: 25px auto;
+	border-radius: 10px;
+	border: 1px dotted #969696;
+	padding: 25px;
+
+	i{
+		display: block;
+		margin-top: -10px;
+		margin-bottom: 5px;
+	}
+	#error_explanation{
+		h2{
+			color: #f00;
+			padding: 0;
+			margin: 0;
+			text-decoration: underline;
+			margin-bottom: 5px;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li{
+				margin-bottom: 5px;
+			}
+			li:before{
+				margin-right: 5px;
+				font-family: FontAwesome;
+				content: '\f06a';
+			}
+		}
+	}
+	a{
+		display: block;
+		text-decoration: none;
+		font-size: 18px;
+		color: #22759D;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		transition: all 0.5s;
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+		line-height: 0;
+		margin-top: 20px;
+	}
+	a:hover{
+		color: #0F3446;
+	}
+	legend{
+		font-size: 25px;
+		font-family: 'Roboto', sans-serif;
+		font-weight: bold;
+
+	}
+	.devise_input_label{
+		border-radius: 5px;
+		box-shadow: 0px 0px 3px 0px #969696;
+		font-size: 20px;
+		display: inline-block;
+		margin-bottom: 10px;
+		width: 300px;
+
+	}
+	.devise_input_label:before{
+		font-family: FontAwesome;
+		float: left;
+		padding: 15px 10px;
+		padding-right: 0;
+	}
+	.fa-user:before{
+		content: "\f007";
+	}
+	.fa-lock:before{
+		content: "\f023";
+	}
+	.fa-lock-alt:before{
+		content: "\f13e";
+	}
+	.fa-unlock:before{
+		content: "\f09c";
+	}
+	input[type="email"], input[type="password"]{
+		border: none;
+		outline: none;
+		box-sizing: border-box;
+		padding: 15px;
+		width: 274px;
+		background: none;
+		border-radius: 5px;
+		font-size: 20px;
+		font-family: 'Roboto', sans-serif;
+		height: 51px;
+		margin: 0;
+		float: right;
+	}
+	input[type="email"]:focus, input[type="password"]:focus{
+		border: none;
+		outline: none;
+		box-shadow: none;
+		background: #fff !important;
+	}
+	input:-webkit-autofill {
+	    color: #fff !important;
+	    -webkit-box-shadow: 0 0 0px 1000px white inset;
+	}
+	input:-webkit-autofill:focus {
+	    color: #fff !important;
+	    -webkit-box-shadow: 0 0 0px 1000px white inset;
+	}
+	.remember_me_label{
+		display: block;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	.submit_button{
+		display: block;
+		border: none;
+		outline: none;
+		font-size: 20px;
+		background: #0F3446;
+		color: #fff;
+		width: 300px;
+		border-radius: 5px;
+		padding: 15px;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		transition: all 0.5s;
+	}
+	.submit_button:hover{
+		background: #22759D;
+	}
+}
